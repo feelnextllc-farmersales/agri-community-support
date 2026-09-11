@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>フィールネクスト｜外部産地担当（首都圏・関西企業向け　長野県　産地開拓の外部委託）</title>
+<title>フィールネクスト｜外部産地担当（首都圏・関西企業向け 長野県 産地開拓の外部委託）</title>
 <meta name="description" content="東京・関東・関西など長野県外の企業様向け。長野県の産地開拓・生産者対応を外部化する「外部産地担当」サービス。現地に専任者を置かずに、産地との継続的な接点を構築。20年の実務経験で仕入体制を支援します。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://feelnextllc-farmersales.github.io/nouka-hanbai-lp/">
@@ -186,6 +186,8 @@
   .price-card li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700;font-size:11px;}
   .price-card .lead-time{margin-top:14px;font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;}
   @media (max-width:920px){.price-grid{grid-template-columns:1fr;}}
+  .price-grid-4{grid-template-columns:repeat(2,1fr);}
+  @media (max-width:760px){.price-grid-4{grid-template-columns:1fr;}}
 
   .retainer-table{margin-top:20px;border-top:1px solid var(--line);}
   .retainer-row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--line);font-size:13.5px;}
@@ -254,19 +256,6 @@
   .contact-alt{margin-top:36px;display:flex;gap:28px;flex-wrap:wrap;font-size:13.5px;}
   .contact-alt a{color:#fff;text-decoration:underline;text-underline-offset:3px;}
   @media (max-width:560px){.contact-form .form-grid-2{grid-template-columns:1fr;}}
-
-  /* ---------- farmer sub-service ---------- */
-  .farmer-service{background:var(--paper-alt);}
-  .farmer-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:52px;align-items:center;}
-  .farmer-media{aspect-ratio:1/1;border-radius:2px;overflow:hidden;border:1px solid var(--line);}
-  .farmer-media img{width:100%;height:100%;object-fit:cover;}
-  .farmer-copy h3{font-size:22px;font-weight:700;color:var(--ink);line-height:1.5;}
-  .farmer-copy p{margin-top:16px;font-size:13.5px;color:var(--muted);line-height:1.95;max-width:520px;}
-  .farmer-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
-  .farmer-tags span{font-size:12.5px;color:var(--ink-2);background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 16px;}
-  .farmer-price{margin-top:22px;font-size:13.5px;color:var(--ink-2);}
-  .farmer-price b{font-family:var(--serif);color:var(--gold);font-size:19px;font-weight:700;}
-  @media (max-width:820px){.farmer-grid{grid-template-columns:1fr;gap:28px;}.farmer-media{aspect-ratio:16/9;}}
 
   /* ---------- company ---------- */
   .company-table{max-width:720px;border-top:1px solid var(--line);}
@@ -440,11 +429,10 @@
   <div class="nav-inner">
     <a href="#top" class="logo">フィールネクスト<span class="logo-sub">FEEL NEXT, LLC.</span></a>
     <nav class="links" aria-label="主要ナビゲーション">
-      <a href="#whatis">サービス内容</a>
-      <a href="#achievements">実績</a>
+      <a href="#whatis">産地開拓の外部委託</a>
+      <a href="#bizdev">事業化支援</a>
       <a href="#pricing">料金</a>
       <a href="#faq">よくある質問</a>
-      <a href="#farmer">農家の方へ</a>
       <a href="#company">会社概要</a>
     </nav>
     <a href="#contact" class="nav-cta">相談する</a>
@@ -458,8 +446,8 @@
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <span class="hero-tag">首都圏・関西の企業様へ｜長野県 産地対応を外部化</span>
-        <h1>産地開拓業務のアウトソーシング。<br>「外部産地担当」という選択。</h1>
+        <span class="hero-tag">産地開拓業務のアウトソーシング</span>
+        <h1>産地開拓・生産者対応を外部委託する、<br>「外部産地担当」という選択。</h1>
         <p class="lede">東京・関東や関西など、長野県から離れた場所にある企業にとって、産地への訪問・関係構築・情報収集を自社だけで継続するのは大きな負担です。長野県の産地に精通した外部人材が、貴社の「長野県側の窓口」として、産地開拓から関係維持、情報収集・共有までを担います。</p>
         <ul class="hero-points">
           <li>長野県まで頻繁に足を運べないが、産地との接点は増やしたい</li>
@@ -518,7 +506,7 @@
   <section style="background:var(--white);" id="whatis">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">What It Is</span>
+        <span class="eyebrow">SERVICE 01｜What It Is</span>
         <h2>外部産地担当とは</h2>
         <p>買い取って販売する仕入先ではなく、貴社の仕入・商品開発・産地連携を支える「外部の産地担当」として、現地で必要な活動を行います。社内担当者がすべての産地業務を抱えるのではなく、現地でしかできない業務を外部化することで、社内の担当者が本来の仕入・営業・販売業務に集中できる環境づくりを支援します。</p>
       </div>
@@ -557,7 +545,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">About the Provider</span>
-        <h2>実務者について</h2>
+        <h2>提案者について</h2>
       </div>
       <div class="achieve-grid reveal">
         <div class="achieve-card"><span class="a-icon">20</span><p>長野県にて20年間、肥料販売、農産物生産、農産物流通・販売に従事</p></div>
@@ -798,7 +786,7 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Self Check</span>
-        <h2>このようなことでお困りでしたら、ぜひご相談ください</h2>
+        <h2>このようなことでお困りでしたら、気軽にご相談ください</h2>
       </div>
       <div class="checklist-card reveal">
         <p class="lead">あてはまるものにチェックしてみてください。1つでも当てはまれば、まずはお気軽にご相談ください。</p>
@@ -932,6 +920,7 @@
         <span class="eyebrow">Contact</span>
         <h2>まずはご相談ください</h2>
         <p>「長野県に人を置くほどではないが、産地との接点は持ちたい」「新しい仕入先を探したいが、現地まで継続的に足を運ぶ時間がない」——そのような課題をお持ちでしたら、まずは現在の仕入体制や今後開拓したい品目・産地についてお聞かせください。</p>
+        <p style="margin-top:14px;">農地・施設・農産物・地域資源などの活用についてご相談の場合は、現在お持ちの農地・施設・農産物・地域資源など、活用したいものがあればあわせてお聞かせください。</p>
       </div>
 
       <div class="contact-form-card reveal">
@@ -945,9 +934,9 @@
             <label for="cf-type">お問い合わせ区分</label>
             <select id="cf-type" name="type">
               <option value="外部産地担当について">外部産地担当について</option>
+              <option value="農業・地域資源の事業化支援について">農業・地域資源の事業化支援について</option>
               <option value="仕入れ先開拓・調達支援">仕入れ先開拓・調達支援</option>
               <option value="産地形成・プロジェクト支援">産地形成・プロジェクト支援</option>
-              <option value="農家の販売担当について">農家の販売担当について</option>
               <option value="その他のお問い合わせ">その他のお問い合わせ</option>
             </select>
           </div>
@@ -970,28 +959,96 @@
   </section>
 
 
-  <!-- FARMER SUB-SERVICE -->
-  <section class="farmer-service" id="farmer">
+  <!-- BUSINESS DEVELOPMENT SERVICE -->
+  <section id="bizdev">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Another Service</span>
-        <h2>農家の方へ：農家の販売担当</h2>
+        <span class="eyebrow">SERVICE 02</span>
+        <h2>農業・地域資源の事業化支援</h2>
+        <p>農地・農産物・加工施設・空間・地域資源など、既にある資源を組み合わせ、「何ができるか」ではなく「どう事業として活かすか」を企画・設計・支援するサービスです。単なるアイデア提案ではなく、実際に事業として動かすための企画・設計・マネジメントまで行います。</p>
       </div>
-      <div class="farmer-grid reveal">
-        <div class="farmer-media">
-          <img src="founder.jpg" alt="収穫したかぶを手に笑顔を見せる代表 小林大二" loading="lazy">
+
+      <div class="strength-block reveal">
+        <p>農業や地域には、農地、農産物、加工施設、空きスペース、人、技術、景観など、まだ十分に活かされていない資源があります。当社では、それらを整理し、活用方法の検討からサービス内容・料金体系の設計、イベント・体験プログラムの企画、収益モデルの検討、運営方法の設計、事業開始後の改善・マネジメントまで、案件に応じて支援します。</p>
+      </div>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--ink);margin:36px 0 16px;">こんな方へ</h3>
+      <div class="needs-grid reveal">
+        <div class="need-card">農地を活用した新しい事業を考えたい</div>
+        <div class="need-card">農業体験や収穫体験を事業化したい</div>
+        <div class="need-card">加工施設をもっと活用したい</div>
+        <div class="need-card">空いている施設やスペースを収益化したい</div>
+        <div class="need-card">農産物を使った新しいサービスを作りたい</div>
+        <div class="need-card">施設はあるが、どう収益化すればよいか分からない</div>
+        <div class="need-card">新規事業を考えているが社内に企画担当者がいない</div>
+      </div>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--ink);margin:44px 0 16px;">支援内容・料金</h3>
+      <div class="ladder reveal">
+        <div class="ladder-step">無料相談<span class="ls-sub">まずヒアリング</span></div>
+        <span class="ladder-arrow">→</span>
+        <div class="ladder-step">短期支援<span class="ls-sub">3ヶ月以内の立ち上げ</span></div>
+        <span class="ladder-arrow">→</span>
+        <div class="ladder-step">長期支援<span class="ls-sub">6ヶ月〜1年の事業化</span></div>
+        <span class="ladder-arrow">→</span>
+        <div class="ladder-step">運営・マネジメント<span class="ls-sub">事業開始後の継続支援</span></div>
+      </div>
+
+      <div class="price-grid price-grid-4 reveal">
+        <div class="price-card">
+          <span class="price-plan">無料相談</span>
+          <h4>まずはヒアリングから</h4>
+          <div class="price-value">¥0<small>（完全無料）</small></div>
+          <p class="desc">今お持ちの農地・施設・農産物・地域資源や、実現したいことをお聞かせください。大まかな方向性・進め方をお伝えします。</p>
         </div>
-        <div class="farmer-copy">
-          <h3>「売らなければ」を、少しラクに。</h3>
-          <p>栽培には、自然や農作物と向き合う力がいる。販売には、人と向き合う力がいる。私たちは、その販売を担当する存在です。長野県内の農家様には、専属の販売担当として、販売戦略の設計から販路開拓、営業活動、販売開始後のフォローまでを一貫してサポートします。</p>
-          <div class="farmer-tags">
-            <span>販売戦略</span><span>販路開拓</span><span>営業代行</span><span>専属販売担当</span><span>条件が合えば買取</span>
-          </div>
-          <p class="farmer-price">販売担当登録費　<b>¥33,000</b>（税込）〜　※その後は成約時のみ販売手数料</p>
-          <div class="hero-cta-row" style="margin-top:26px;">
-            <a href="#contact" class="btn-primary">農家の販売担当について相談する</a>
-          </div>
+        <div class="price-card">
+          <span class="price-plan">短期事業化支援｜3ヶ月以内</span>
+          <h4>小さく早く立ち上げたい方へ</h4>
+          <div class="price-value">月額¥100,000<small>〜</small></div>
+          <p class="desc">ある程度構想が固まっており、早期に小さく始めたい場合に。企画の具体化からサービス設計、立ち上げまでを月単位で伴走します。</p>
         </div>
+        <div class="price-card highlight">
+          <span class="price-plan">長期事業化支援｜6ヶ月〜1年</span>
+          <h4>じっくり事業化を目指す方へ</h4>
+          <div class="price-value">総額 個別見積り</div>
+          <p class="desc">複数の資源を組み合わせた複合企画や、規模の大きい事業化を目指す場合に。着手金・中間金・完了金の分割制で進めます。</p>
+          <ul>
+            <li>着手金：契約時にお支払い</li>
+            <li>中間金：設計完了時にお支払い</li>
+            <li>完了金：立ち上げ完了時にお支払い</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <span class="price-plan">運営・マネジメント</span>
+          <h4>事業開始後の継続支援</h4>
+          <div class="price-value">月額¥100,000<small>〜</small></div>
+          <p class="desc">事業開始後も外部の事業担当者として、運営支援・新規企画・改善を継続的に支援します。</p>
+          <p class="lead-time">※内容・規模により個別見積り</p>
+        </div>
+      </div>
+      <p class="mini-note reveal" style="margin-top:8px;">
+        料金はすべて「〜」表記です。案件内容・規模に応じた個別見積りとなります。<br>
+        <b>SPOT｜個別相談：</b>プロジェクトとして進める前に、単発で「この資源を使って何かできないか」といった簡易な企画整理をご希望の場合は、SPOT（¥50,000〜／案件）としても対応します。
+      </p>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--ink);margin:52px 0 16px;">活用事例</h3>
+      <div class="strength-block reveal">
+        <p>具体的な事業構想の一例をご紹介します。ある事業者様は、既存の資源としては食品加工施設と2階のオープンスペースのみをお持ちでした。そこに「レンタル農園を始めたい」というご希望を伺い、これらを組み合わせて事業化に向けた設計を組み立てました。</p>
+      </div>
+      <div class="calc-diff reveal" style="font-size:13.5px;">レンタル農園で育てる　→　加工施設で加工する　→　2階スペースで楽しむ・販売する</div>
+      <p class="mini-note reveal" style="margin-top:20px;">
+        さらに、スポット利用・セットプラン・体験・ワークショップ・会員制度などを設計し、施設そのものを「貸す」だけでなく、複数の利用目的から継続的に収益を生み出す仕組みを企画しました。<br>
+        ※上記は事業化支援の一事例です。お持ちの資源の組み合わせ方次第で、様々な事業化の形をご提案できます。
+      </p>
+
+      <h3 style="font-size:15px;font-weight:700;color:var(--ink);margin:52px 0 16px;">当社ならではの強み</h3>
+      <div class="strength-block reveal">
+        <p style="font-weight:700;color:var(--ink);">「現場を知っているから、事業に落とし込める。」</p>
+        <p>単なるコンサルティング会社としてではなく、当社がこれまで農業・農産物・生産者・流通に関わってきた経験を活かして支援します。生産者とのネットワーク、農産物の生産・販売、農産物流通、食品関連企業との接点、農業現場での経験などを活かし、机上の企画だけではなく、現場で実現できる事業づくりを目指します。</p>
+      </div>
+
+      <div class="hero-cta-row reveal" style="margin-top:32px;">
+        <a href="#contact" class="btn-primary">事業化について相談する</a>
       </div>
     </div>
   </section>
@@ -1011,7 +1068,7 @@
         <div class="company-row"><dt>設立</dt><dd>2014年7月22日</dd></div>
         <div class="company-row"><dt>代表</dt><dd>小林大二</dd></div>
         <div class="company-row"><dt>事業内容</dt><dd>
-          外部産地担当サービス（産地開拓・生産者対応の外部化）／仕入れ先開拓・産地形成支援／有機肥料・有機資材販売／青果卸、生産販売／農作物流通サポート
+          外部産地担当サービス（産地開拓・生産者対応の外部化）／農業・地域資源の事業化支援／仕入れ先開拓・産地形成支援／有機肥料・有機資材販売／青果卸、生産販売／農作物流通サポート
         </dd></div>
       </dl>
     </div>
@@ -1064,12 +1121,12 @@
     <div class="footer-top">
       <span class="footer-logo">合同会社フィールネクスト</span>
       <ul class="footer-links">
-        <li><a href="#whatis">サービス内容</a></li>
+        <li><a href="#whatis">産地開拓の外部委託</a></li>
+        <li><a href="#bizdev">事業化支援</a></li>
         <li><a href="#achievements">実績</a></li>
         <li><a href="#pricing">料金</a></li>
         <li><a href="#flow">ご相談から導入まで</a></li>
         <li><a href="#faq">よくある質問</a></li>
-        <li><a href="#farmer">農家の方へ</a></li>
         <li><a href="#company">会社概要</a></li>
         <li><a href="#privacy">プライバシーポリシー</a></li>
         <li><a href="#tokushoho">特定商取引法に基づく表記</a></li>
@@ -1079,7 +1136,7 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <span>産地開拓業務のアウトソーシング。</span>
+      <span>長野県東信地域を中心に、全国の生産者・企業とつながっています。</span>
       <span>&copy; 2026 合同会社フィールネクスト</span>
     </div>
   </div>
