@@ -209,6 +209,16 @@
   }
   @media (min-width:820px){ .flow-arrow{padding:0 6px;} }
 
+  /* ===== examples ===== */
+  .example-card{display:flex;flex-direction:column;gap:10px;}
+  .example-card .ex-tag{
+    align-self:flex-start;background:var(--lime);color:var(--green-deep);
+    padding:5px 13px;border-radius:999px;font-size:0.78rem;font-weight:700;
+  }
+  .example-card h3{font-size:1.08rem;color:var(--green-deep);}
+  .example-card p{font-size:0.92rem;color:var(--ink-soft);}
+  .example-disclaimer{margin-top:20px;font-size:0.82rem;color:var(--ink-soft);}
+
   /* ===== 4 services ===== */
   .service-card{display:flex;flex-direction:column;height:100%;}
   .service-card .tag{
@@ -269,6 +279,30 @@
   }
   .beyond-note strong{color:var(--green-deep);}
 
+  /* ===== case study ===== */
+  .case-meta{font-size:0.85rem;font-weight:700;color:var(--green-mid);margin-bottom:6px;}
+  .case-title{font-size:1.3rem;color:var(--green-deep);margin-bottom:16px;}
+  .case-equation{
+    font-weight:800;color:var(--green-deep);font-size:1.05rem;margin:22px 0;
+    background:var(--cream);display:inline-block;padding:12px 20px;border-radius:12px;
+  }
+  .case-equation span.op{color:var(--sun-deep);margin:0 4px;}
+  .case-points{display:grid;gap:10px;margin-top:18px;}
+  @media (min-width:700px){ .case-points{grid-template-columns:1fr 1fr;} }
+  .case-points li{
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;font-size:0.9rem;
+  }
+  .case-support{margin-top:44px;}
+  .case-closing{
+    margin-top:40px;background:var(--green-deep);color:#fff;border-radius:var(--radius);
+    padding:30px 28px;
+  }
+  .case-closing p{color:#D9E4DB;}
+  .case-closing p.lead2{font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:12px;}
+  .case-closing .cd-mark{
+    margin-top:18px;font-weight:800;letter-spacing:0.1em;color:var(--lime);font-size:1.1rem;
+  }
+
   /* ===== third party ===== */
   .third-wrap{display:grid;gap:32px;}
   @media (min-width:900px){ .third-wrap{grid-template-columns:1fr 1fr;align-items:start;} }
@@ -282,6 +316,10 @@
   }
   .evidence-list li:last-child{border-bottom:none;}
   .evidence-list .mk{color:var(--sun-deep);font-weight:800;}
+  .field-photo{
+    width:100%;height:180px;object-fit:cover;border-radius:14px;margin-bottom:16px;
+    box-shadow:var(--shadow);
+  }
 
   /* ===== founder ===== */
   .founder-wrap{display:grid;gap:28px;align-items:center;}
@@ -292,7 +330,7 @@
     font-size:2.2rem;font-weight:800;margin:0 auto;overflow:hidden;
     border:4px solid var(--lime);box-shadow:var(--shadow);
   }
-  .avatar img{width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+  .avatar img{width:100%;height:100%;object-fit:cover;object-position:center 32%;transform:scale(1.35);}
   .founder-name{margin-top:16px;text-align:center;font-weight:800;color:var(--green-deep);}
   .founder-role{text-align:center;font-size:0.85rem;color:var(--ink-soft);}
   .founder-bio h3{font-size:1.2rem;color:var(--green-deep);}
@@ -376,6 +414,11 @@
   }
   .form-row textarea{min-height:88px;resize:vertical;}
   .form-note{font-size:0.8rem;color:var(--ink-soft);margin-top:-6px;margin-bottom:16px;}
+  .field-error{
+    display:none;margin-top:6px;font-size:0.82rem;color:#C43D3D;font-weight:700;
+  }
+  .field-error.show{display:block;}
+  .form-row input.invalid,.form-row textarea.invalid{border-color:#C43D3D;background:#FFF6F6;}
   .form-success{
     display:none;background:var(--cream);border:1px solid var(--lime-deep);border-radius:14px;
     padding:22px;text-align:center;font-weight:700;color:var(--green-deep);
@@ -385,6 +428,19 @@
     display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;
     padding:6px 14px;border-radius:999px;font-size:0.85rem;margin-bottom:14px;
   }
+  .social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .social-links a{
+    display:inline-flex;align-items:center;padding:9px 18px;border-radius:999px;
+    border:1px solid rgba(255,255,255,0.4);color:#fff;font-size:0.88rem;font-weight:700;
+    text-decoration:none;transition:background-color .18s ease;
+  }
+  .social-links a:hover{background:rgba(255,255,255,0.14);}
+  .footer-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+  .footer-social a{
+    display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;
+    border:1px solid rgba(255,255,255,0.2);color:#B9C9BF;font-size:0.82rem;text-decoration:none;
+  }
+  .footer-social a:hover{color:#fff;border-color:rgba(255,255,255,0.5);}
 
   /* ===== footer ===== */
   footer.site-footer{background:#0F2A20;color:#B9C9BF;padding:44px 0 100px;font-size:0.86rem;}
@@ -480,7 +536,7 @@
   <section id="for-you" class="section section--cream">
     <div class="container">
       <div class="section-head">
-        <h2 class="section-title">こんなことを考えていませんか？</h2>
+        <h2 class="section-title">どんなことをお考えですか？</h2>
         <p>ひとつでも当てはまれば、お話しできることがあります。</p>
       </div>
       <ul class="check-list">
@@ -534,6 +590,40 @@
         <div class="flow-arrow">→</div>
         <div class="flow-step"><span class="num">4</span><h3>事業</h3><p>必要に応じて、新しい仕事やプロジェクトへ発展。</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= 対応イメージ ================= -->
+  <section id="examples" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">対応できるイメージ</p>
+        <h2 class="section-title">たとえば、こんなコミュニティに対応できます</h2>
+        <p>いずれも想定される一例です。実際の内容はご相談に応じて一緒に組み立てていきます。</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card example-card">
+          <span class="ex-tag">例：交流会・体験会型</span>
+          <h3>生産者と地域住民が出会う交流会</h3>
+          <p>「まずは月1回、畑に人を呼びたい」という段階から、コンセプト整理・告知の考え方・継続の仕組みまでを一緒に設計します。</p>
+        </div>
+        <div class="card example-card">
+          <span class="ex-tag">例：移住・関係人口型</span>
+          <h3>農業をきっかけにした移住者との交流の場</h3>
+          <p>すでに集まりはあるが参加者が固定化してきた、というケースで、関係人口を広げる企画や運営方法を整理します。</p>
+        </div>
+        <div class="card example-card">
+          <span class="ex-tag">例：他分野連携型</span>
+          <h3>農業×食・観光を組み合わせた企画</h3>
+          <p>コミュニティの活動が広がってきたタイミングで、飲食店・宿泊・体験事業者などとの連携企画をプロデュースします。</p>
+        </div>
+        <div class="card example-card">
+          <span class="ex-tag">例：事業化型</span>
+          <h3>コミュニティから生まれた新しい仕事づくり</h3>
+          <p>コミュニティの活動から派生した企画やサービスを、実際のプロジェクト・事業として形にするところまで伴走します。</p>
+        </div>
+      </div>
+      <p class="example-disclaimer">※上記は対応可能な内容のイメージであり、特定の実在するコミュニティの事例ではありません。</p>
     </div>
   </section>
 
@@ -701,6 +791,53 @@
     </div>
   </section>
 
+  <!-- ================= CASE STUDY ================= -->
+  <section id="case-study" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">CASE STUDY</p>
+        <h2 class="section-title">既存リソースを活かした農業関連事業の企画・提案</h2>
+        <p>デザイン設計事務所様｜建築・デザインを手掛けながら、すでに農業分野にも取り組んでいる事業者様への支援事例です。</p>
+      </div>
+
+      <div class="card">
+        <p class="case-meta">CLIENT：デザイン設計事務所様</p>
+        <h3 class="case-title">既存の施設・農地・環境を活かした新しい事業展開の企画</h3>
+        <p style="color:var(--ink-soft);">すでにお持ちの施設・農地・環境などのリソースを活用し、新たな事業展開について企画・提案を行いました。農業そのものだけでなく、次の視点から現在持っている資源を組み合わせ、どのような新しい価値を生み出せるかを検討しました。</p>
+
+        <p class="case-equation">施設<span class="op">×</span>農業<span class="op">×</span>食<span class="op">×</span>体験<span class="op">×</span>地域</p>
+
+        <p style="font-weight:700;color:var(--green-deep);margin-top:8px;">整理・提案した可能性の例</p>
+        <ul class="case-points">
+          <li>加工施設の新たな活用方法</li>
+          <li>農地と施設を組み合わせた体験企画</li>
+          <li>収穫・調理・食をつなげた体験</li>
+          <li>イベント・交流の場としての施設活用</li>
+          <li>料理教室・ワークショップ</li>
+          <li>地域の環境を活かした体験企画</li>
+          <li>既存施設を活用した新たな事業モデル</li>
+        </ul>
+
+        <div class="case-support">
+          <p class="eyebrow">SUPPORT</p>
+          <div class="steps-list">
+            <div class="step"><span class="snum"></span><h3>既存リソースの整理</h3></div>
+            <div class="step"><span class="snum"></span><h3>農業との接点を整理</h3></div>
+            <div class="step"><span class="snum"></span><h3>活用方法・アイデアの検討</h3></div>
+            <div class="step"><span class="snum"></span><h3>事業・企画として具体化</h3></div>
+            <div class="step"><span class="snum"></span><h3>今後の展開可能性を提案</h3></div>
+          </div>
+        </div>
+
+        <div class="case-closing">
+          <p class="lead2">新しいものをゼロからつくるのではなく、「すでに持っているもの」を見つめ直し、組み合わせる。</p>
+          <p>農業、施設、地域、食、体験、そして事業者が持つ専門性。それぞれの「点」をつなぐことで、新しい活動や事業の可能性をつくります。</p>
+          <p class="cd-mark">CONNECT THE DOTS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= 第三者だからできること ================= -->
   <section id="third-party" class="section">
     <div class="container">
@@ -714,6 +851,7 @@
           <p style="margin-top:14px;color:var(--ink-soft);">コミュニティの内部だけでは気づきにくい、方向性・参加者との関係・運営上の課題・企画の可能性・地域との接点・他分野との組み合わせ・次に何をするべきかを、第三者の視点から一緒に整理します。</p>
         </div>
         <div>
+          <img src="founder.jpg" alt="ビニールハウスでトマトを栽培する農業現場の様子" class="field-photo">
           <p style="font-weight:700;color:var(--green-deep);margin-bottom:12px;">なぜこのサービスを提供できるのか</p>
           <ul class="evidence-list">
             <li><span class="mk">・</span>長野県の農業現場での約20年の経験</li>
@@ -811,6 +949,9 @@
 
       <div class="combo-note">💡 複数のサービスを組み合わせることも可能です。例：「スポット相談」で方向性を決めてから「立ち上げ支援」へ、といった進め方もできます。</div>
       <div class="price-note">※料金は目安です。内容・規模・期間・必要な作業量によって個別にお見積りします。「企画だから高い」のではなく、実際に形にして動かす段階になるほど価格が上がる、という考え方です。</div>
+      <div class="center" style="margin-top:32px;">
+        <a href="#contact" class="btn btn--primary">5,000円のスポット相談から始める</a>
+      </div>
     </div>
   </section>
 
@@ -871,16 +1012,23 @@
         <p class="lead">「まだ具体的に決まっていない」という方も、もちろん相談できます。今考えていることを、そのまま書いてください。</p>
         <p class="lead" style="margin-top:24px;font-weight:700;color:#fff;">信州アグリコミュニティサポート<br><span style="font-weight:400;color:#D9E4DB;">合同会社フィールネクスト｜長野県小諸市</span></p>
         <p class="lead" style="margin-top:14px;">メールでのお問い合わせも受け付けています：<br><a href="mailto:feelnext.llc@gmail.com" style="color:var(--lime);font-weight:700;">feelnext.llc@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1Ee4eiRN4L/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/feel.next/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.threads.net/@shinshu.agri.community.support" target="_blank" rel="noopener noreferrer">Threads</a>
+        </div>
       </div>
       <div class="form-card">
         <form id="contactForm" novalidate>
           <div class="form-row">
             <label for="name">お名前 <span style="color:var(--sun-deep);">※必須</span></label>
             <input type="text" id="name" name="name" required>
+            <span class="field-error" id="err-name"></span>
           </div>
           <div class="form-row">
             <label for="email">メールアドレス <span style="color:var(--sun-deep);">※必須</span></label>
             <input type="email" id="email" name="email" required>
+            <span class="field-error" id="err-email"></span>
           </div>
           <div class="form-row">
             <label for="phone">電話番号（任意）</label>
@@ -898,6 +1046,7 @@
           <div class="form-row">
             <label for="want">何をしたいか／困っていること <span style="color:var(--sun-deep);">※必須</span></label>
             <textarea id="want" name="want" required placeholder="決まっていない場合は、思っていることをそのまま書いてください"></textarea>
+            <span class="field-error" id="err-want"></span>
           </div>
           <div class="form-row">
             <label for="timing">希望開始時期</label>
@@ -907,10 +1056,10 @@
               <option>まだ未定</option>
             </select>
           </div>
-          <p class="form-note">送信いただいた内容は、初回相談のご案内にのみ使用します。うまく送信できない場合は feelnext.llc@gmail.com へ直接ご連絡ください。</p>
-          <button type="submit" class="btn btn--primary btn--block">無料相談を申し込む</button>
+          <p class="form-note">送信ボタンを押すと、入力内容を差し込んだメールがお使いのメールソフトで開きます。内容をご確認のうえ、そのまま送信してください。うまく開かない場合は feelnext.llc@gmail.com へ直接ご連絡ください。</p>
+          <button type="submit" class="btn btn--primary btn--block">メールを作成して相談を申し込む</button>
         </form>
-        <div class="form-success" id="formSuccess">送信ありがとうございます。内容を確認のうえ、担当よりご連絡いたします。</div>
+        <div class="form-success" id="formSuccess">メールソフトが開きます。内容をご確認のうえ、そのまま送信してください。届いたメールを確認し次第、担当よりご連絡いたします。</div>
       </div>
     </div>
   </section>
@@ -927,6 +1076,14 @@
       <strong>お問い合わせ</strong>
       <a href="#contact">無料相談フォームへ</a><br>
       <a href="mailto:feelnext.llc@gmail.com">feelnext.llc@gmail.com</a>
+    </div>
+    <div>
+      <strong>SNS</strong>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/share/1Ee4eiRN4L/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/feel.next/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.threads.net/@shinshu.agri.community.support" target="_blank" rel="noopener noreferrer">Threads</a>
+      </div>
     </div>
     <div style="max-width:280px;color:#8CA294;">
       © 信州アグリコミュニティサポート／合同会社フィールネクスト
@@ -973,20 +1130,80 @@
   window.addEventListener('scroll', updateSticky, {passive:true});
   updateSticky();
 
-  // Contact form: client-side handling (no backend wired up yet)
+  // Contact form: custom Japanese validation + mailto submission.
+  // NOTE: フォーム送信APIやスプレッドシート連携を導入する場合は、この送信処理を差し替えてください。
   var form = document.getElementById('contactForm');
   var success = document.getElementById('formSuccess');
+  var CONTACT_EMAIL = 'feelnext.llc@gmail.com';
+
+  var validators = {
+    name:  { el: document.getElementById('name'),  msg: 'お名前を入力してください' },
+    email: { el: document.getElementById('email'), msg: '正しいメールアドレスを入力してください',
+             check: function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); } },
+    want:  { el: document.getElementById('want'),  msg: 'ご相談内容を入力してください（決まっていない旨でも構いません）' }
+  };
+
+  function validateField(key){
+    var v = validators[key];
+    var value = v.el.value.trim();
+    var ok = value.length > 0 && (v.check ? v.check(value) : true);
+    var errorEl = document.getElementById('err-' + key);
+    if(!ok){
+      v.el.classList.add('invalid');
+      errorEl.textContent = v.msg;
+      errorEl.classList.add('show');
+    } else {
+      v.el.classList.remove('invalid');
+      errorEl.classList.remove('show');
+    }
+    return ok;
+  }
+
+  Object.keys(validators).forEach(function(key){
+    validators[key].el.addEventListener('blur', function(){ validateField(key); });
+    validators[key].el.addEventListener('input', function(){
+      if(validators[key].el.classList.contains('invalid')) validateField(key);
+    });
+  });
+
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
-    if(!form.checkValidity()){
-      form.reportValidity();
+    var allOk = Object.keys(validators).map(validateField).every(Boolean);
+    if(!allOk){
+      var firstInvalid = form.querySelector('.invalid');
+      if(firstInvalid) firstInvalid.focus();
       return;
     }
+
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var stage = document.getElementById('stage').value;
+    var want = document.getElementById('want').value.trim();
+    var timing = document.getElementById('timing').value;
+
+    var subject = '【無料相談】' + name + '様よりお問い合わせ';
+    var body = [
+      'お名前：' + name,
+      'メールアドレス：' + email,
+      '電話番号：' + (phone || '(未記入)'),
+      '現在の状況：' + stage,
+      '希望開始時期：' + timing,
+      '',
+      '相談内容：',
+      want
+    ].join('\n');
+
+    var mailtoUrl = 'mailto:' + CONTACT_EMAIL
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoUrl;
+
     form.style.display = 'none';
     success.classList.add('show');
     success.setAttribute('tabindex','-1');
     success.focus();
-    // NOTE: この先に実際の送信処理（メール送信・スプレッドシート連携など）を実装してください。
   });
 </script>
 </body>
