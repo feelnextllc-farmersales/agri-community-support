@@ -316,10 +316,19 @@
   }
   .evidence-list li:last-child{border-bottom:none;}
   .evidence-list .mk{color:var(--sun-deep);font-weight:800;}
-  .field-photo{
-    width:100%;height:180px;object-fit:cover;border-radius:14px;margin-bottom:16px;
-    box-shadow:var(--shadow);
+  .stat-block{
+    background:var(--green-deep);color:#fff;border-radius:16px;
+    padding:26px 24px;margin-bottom:18px;position:relative;overflow:hidden;
   }
+  .stat-block .stat-dots{display:flex;gap:6px;margin-bottom:14px;}
+  .stat-block .stat-dots span{width:8px;height:8px;border-radius:50%;background:var(--lime);}
+  .stat-block .stat-dots span:nth-child(2){background:var(--sun);}
+  .stat-block .stat-dots span:nth-child(4){background:var(--sun);}
+  .stat-block .num{
+    font-size:3rem;font-weight:800;line-height:1;color:var(--lime);
+  }
+  .stat-block .num small{font-size:1.3rem;font-weight:800;margin-left:4px;color:var(--lime);}
+  .stat-block p{margin-top:8px;font-size:0.92rem;color:#D9E4DB;}
 
   /* ===== founder ===== */
   .founder-wrap{display:grid;gap:28px;align-items:center;}
@@ -851,7 +860,11 @@
           <p style="margin-top:14px;color:var(--ink-soft);">コミュニティの内部だけでは気づきにくい、方向性・参加者との関係・運営上の課題・企画の可能性・地域との接点・他分野との組み合わせ・次に何をするべきかを、第三者の視点から一緒に整理します。</p>
         </div>
         <div>
-          <img src="founder.jpg" alt="ビニールハウスでトマトを栽培する農業現場の様子" class="field-photo">
+          <div class="stat-block">
+            <div class="stat-dots"><span></span><span></span><span></span><span></span><span></span></div>
+            <p class="num">20<small>年</small></p>
+            <p>長野県の農業現場に携わってきた年数。生産・販売・流通・肥料販売など、現場から流通までを見てきた経験が、支援の土台になっています。</p>
+          </div>
           <p style="font-weight:700;color:var(--green-deep);margin-bottom:12px;">なぜこのサービスを提供できるのか</p>
           <ul class="evidence-list">
             <li><span class="mk">・</span>長野県の農業現場での約20年の経験</li>
